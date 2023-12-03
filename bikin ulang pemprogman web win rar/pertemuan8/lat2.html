@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rico fadillah - Pertemuan 8: Latihan 2</title>
+
+    <style>
+        body{
+            overflow: hidden;
+        }
+
+        h1 {
+            color: blueviolet;
+            text-align: center  ;
+        }
+
+        .btn {
+            border-radius: 10px;
+            margin-left: 100px;
+            padding-top: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 15px;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: tomato;
+            transition: .3s;
+        }
+
+        footer {
+            background-color: #444;
+            width: 100%;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        p {
+            color: white;
+            font-family: consolas;
+            font-size: large;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <h1>FREE REGISTRATION</h1>
+        <pre>
+        Nama            : <input type="text" size="20">
+        Tgl Lahir       : <input type="text" size="5"> / <input type="text" size="5"> / <input type="text" size="5">
+        Alamat          : <input type="text" size="20">
+        Kota            : <input type="text">
+        Pekerjaan       : <select name="pekerjaan" id="pekerjaan">
+                <option value="Tani">Tani</option>
+                <option value="Pegawai Swasta">Pegawai Swasta</option>
+                <option value="Buruh">Buruh</option>
+                <option value="Karyawan">Karyawan</option>
+                <option value="Pegawai Negeri Sipil">Pegawai Negeri Sipil</option>
+        </select>
+        Jenis Kelamin   : <input type="radio" value="Laki-laki">Laki-laki <input type="radio" value="Perempuan">Perempuan
+        Hobby           : <input type="checkbox" value="Reading">Reading
+                          <input type="checkbox" value="Sport">Sport
+                          <input type="checkbox" value="Singing">Singing
+                          <input type="checkbox" value="Traveling">Traveling
+    </pre>
+        <br>
+        <input type="submit" value="Kirim" class="btn">
+        <input type="reset" value="Cancel" class="btn">
+    </form>
+
+    <footer>
+        <p> rico fadillah</p>
+    </footer>
+</body>
+
+</html>

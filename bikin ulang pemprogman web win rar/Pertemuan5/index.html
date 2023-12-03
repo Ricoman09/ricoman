@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 5</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Consolas;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #background-gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(108, 0, 231, 0.164);
+            /* Kotak transparan dengan warna hitam */
+            z-index: -1;
+        }
+
+        hr {
+            width: 100%;
+            height: 3px;
+            background-color: blue;
+            border: none;
+            margin: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .nav-container h3 {
+            margin: 0;
+            padding: 0 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 20px;
+            color: aquamarine;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <img id="background-gif" src="bg.gif" alt="background-gif">
+
+    <div class="overlay"></div> <!-- Kotak transparan -->
+
+    <hr>
+    <nav>
+        <div class="nav-container">
+            <h3><a href="home5.html">Home</a></h3> |
+            <h3><a href="profil5.html">Profil</a></h3> |
+            <h3><a href="about5.html">About</a></h3> |
+            <h3><a href="gallery5.html">Gallery</a></h3> |
+            <h3><a href="kontak5.html">Kontak</a></h3> |
+            <h3><a href="tugas5.html">Latihan & Tugas</a></h3>
+        </div>
+    </nav>
+    <hr>
+    <p>
+        <font size="3">
+            Assalammualaikum.Wr.Wb.
+            Apa kabar semua. Salam kenal ini adalah web perdanaku. Web ini berisi informasi
+            tentang Data pribadi dan Tugas untuk Perkuliahan. <br> Semoga web ini dapat menginspirasi Anda. <a
+                href="http://www.google.com" target="_blank">Google</a>
+            Silakan hubungi saya jika ada yang ingin didiskusikan <br><a href="mailto:inialif28@gmail.com">Email</a>
+        </font>
+    </p>
+</body>
+
+</html>

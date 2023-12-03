@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rico fadillah - Pertemuan 8: Latihan 1</title>
+</head>
+
+<body>
+    <!--NIM, NAMA, JENIS KELAMIN, AGAMA, STATUS, JURUSAN, KOMENTAR.-->
+    <form onsubmit="updateTextarea(event)">
+        <H1> Form Pendaftaran</H1>
+        <hr>
+        <pre>
+    NIM             : <input type="text" size="25" name="nim">
+    NAMA            : <input type="text" size="25" name="nama">
+    JENIS KELAMIN   : <input type="radio" name="jkel" value="Pria">Pria <input type="radio"
+            name="jkel" value="Wanita">Wanita
+    AGAMA           : <select name="agama">
+            <option value="Islam">Islam</option>
+            <option value="Katoholik">Katholik</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+        </select>
+    STATUS          : <input type="radio" name="status" value="kawin">Kawin <input
+            type="radio" name="status" value="belumkawin">Belum Kawin
+    JURUSAN         : <select name="jurusan" Size="1">
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Manajemen Informatika">Manajemen Informatika</option>
+            <option value="Teknik Komputer">Teknik Komputer</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+        </select>
+    Hoby            : <input type="checkbox" name="hoby" value="Futsal">Futsal <input
+            type="checkbox" name="hoby" value="Renang">Renang <input
+            type="checkbox" name="hoby" value="Traveling">Traveling
+    KETERANGAN      : <textarea name="ket" id="keterangan" rows="3" cols="30"></textarea>
+</pre>
+        <br>
+        <input type="submit" value="kirim">
+        <input type="reset" value="ulang">
+    </form>
+
+    <script>
+        function updateTextarea(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var nim = document.getElementsByName("nim")[0].value;
+            var nama = document.getElementsByName("nama")[0].value;
+            var jkel = document.querySelector('input[name="jkel"]:checked');
+            var agama = document.getElementsByName("agama")[0].value;
+            var status = document.querySelector('input[name="status"]:checked');
+            var jurusan = document.getElementsByName("jurusan")[0].value;
+            var hoby = document.querySelectorAll('input[name="hoby"]:checked');
+
+            var result = "NIM: " + nim + "\n";
+            result += "NAMA: " + nama + "\n";
+            result += "JENIS KELAMIN: " + (jkel ? jkel.value : "") + "\n";
+            result += "AGAMA: " + agama + "\n";
+            result += "STATUS: " + (status ? status.value : "") + "\n";
+            result += "JURUSAN: " + jurusan + "\n";
+            result += "HOBY: ";
+            for (var i = 0; i < hoby.length; i++) {
+                result += hoby[i].value + " ";
+            }
+            result += "\n";
+
+            document.getElementById("keterangan").value = result;
+        }
+    </script>
+</body>
+
+</html>
